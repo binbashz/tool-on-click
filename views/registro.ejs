@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Tool On Click - Alquiler de Herramientas</title>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body class="login-page-regis">
+    <div class="login-form">
+        <h2><a href="/" class="logo"><strong>Tool on Click</strong></a></h2>
+        <form action="/registro" method="POST">
+            <div class="top-header">
+            <h4>Bienvenido </h4>
+                <small>Comienza tu aventura <strong>registrandote ahora</strong></small>
+                <div class="singin-yatengocuenta">
+                    <p>Ya tengo una cuenta</p>
+                    <a href="/login">entrar</a>
+                </div>
+            </div>
+            <label for="tipoDocumento">Documento</label>
+            <select id="tipoDocumento" name="tipoDocumento" required>
+                <option value="CI">Cédula de Identidad</option>
+                <option value="Pasaporte">Pasaporte</option>
+            </select>
+            <input type="text" name="documento" id="documento" placeholder="Sin puntos ni guiones" required>
+            <input type="text" name="name" id="name" placeholder="Nombre completo" required>
+            <input type="email" name="email" id="email" placeholder="Correo Electrónico" required>
+            <input type="password" name="password" id="password" placeholder="Contraseña" required>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmar Contraseña" required>
+            <% const today = new Date(); %>
+            <% const maxDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate()); %>
+            <input type="date" name="birthdate" id="birthdate" placeholder="Fecha de Nacimiento" max="<%= maxDate.toISOString().split('T')[0] %>" required>
+            <select name="department" id="department" required>
+                <option value="" disabled selected>Seleccione su Departamento</option>
+                <option value="Artigas">Artigas</option>
+                <option value="Canelones">Canelones</option>
+                <option value="Cerro Largo">Cerro Largo</option>
+                <option value="Colonia">Colonia</option>
+                <option value="Durazno">Durazno</option>
+                <option value="Flores">Flores</option>
+                <option value="Florida">Florida</option>
+                <option value="Lavalleja">Lavalleja</option>
+                <option value="Maldonado">Maldonado</option>
+                <option value="Montevideo">Montevideo</option>
+                <option value="Paysandu">Paysandu</option>
+                <option value="Río Negro">Río Negro</option>
+                <option value="Rivera">Rivera</option>
+                <option value="Rocha">Rocha</option>
+                <option value="Salto">Salto</option>
+                <option value="San José">San José</option>
+                <option value="Soriano">Soriano</option>
+                <option value="Tacuarembo">Tacuarembó</option>
+                <option value="Treinta y Tres">Treinta y Tres</option>
+            </select>
+            <input type="submit" class="btn-login" value="Registrarse">
+           </form>
+        </div>
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <% if (typeof alert !== "undefined") { %>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: <%= showConfirmButton %>,
+                timer: <%= timer %>,
+            });
+        </script>
+    <% } %>
+</body>
+</html>

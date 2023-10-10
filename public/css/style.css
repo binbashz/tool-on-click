@@ -1,0 +1,144 @@
+/* Contenido de styles.css */
+
+/* Estilos generales */
+body {
+    font-family: 'MuseoModerno', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    /* Estilos para pantallas pequeñas */
+    .navbar-nav.ml-auto .nav-item.ml-auto {
+        margin-left: 0;
+    }
+}
+
+
+/* Estilo personalizado para la barra */
+/* Estilo personalizado para el fondo naranja */
+.bg-orange {
+    background-color: rgb(0, 0, 0);
+  }
+  
+  /* Asegura que este estilo sea más específico que el estilo original de Bootstrap para el encabezado */
+  .header.bg-orange {
+    background-color: rgb(0, 0, 0);
+  }
+  
+
+/* Etilo borde caja login e inicar sesion */
+.login-form {
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo opaco */
+    padding: 16px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+/* Estilo del contenedor principal (login y contenedor) */
+.login-form, .contenedor {
+    width: 300px;
+    margin: 0 auto;
+    max-width: 400px;
+    margin: 0 auto;
+    max-height: 590px;
+}
+
+/* Imagen fondo de seccion registro y login */
+.login-page-regis {
+    background-image: url('/public/images/imagen.jpg');
+    background-size: cover;
+}
+
+/* Estilo para el contenedor del slider carrusel */
+/* Estilo para las diapositivas */
+.slide {
+  flex: 0 0 100%; /* Ancho igual al ancho de la pantalla */
+  max-width: 100%;
+  height: auto; /* Altura automática para mantener la proporción original */
+}
+
+/* Estilo para el contenedor del slider */
+.slider-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.slider-container img {
+  flex: 0 0 100%;
+  width: 100%;
+  object-fit: cover;
+  scroll-snap-align: center;
+}
+
+/* Establece tamaño máximo para las imágenes */
+/* Estilo para el carrusel */
+.slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 100%; /* Ancho igual al ancho de la pantalla */
+}
+
+
+/* Estilo personalizado para el fondo negro y amarillo */
+.bg-black-yellow {
+  background: linear-gradient(90deg, #000000 0%, #FFFF00 100%);
+}
+
+/* Estilo personalizado para la caja de inicio de sesión */
+/* Estilo personalizado para el contenedor del formulario */
+.login-form {
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 16px;
+  padding: 20px; /* Añade padding adicional para evitar que las cajas de entrada se desborden */
+}
+
+/* Estilo para las cajas de entrada modernas */
+input[type="text"], input[type="password"], select {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+}
+/* Estilo para el fondo negro en las páginas de registro y login */
+.login-page-regis {
+  background-color: black;
+  background-image: url('/public/images/imagen.jpg'); /* Conserva tu imagen de fondo */
+  background-size: cover;
+}
+
+/* Estilo para los bordes amarillos de los campos de entrada */
+input[type="text"], input[type="password"], select {
+  border: 2px solid yellow; /* Borde amarillo */
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Estilo para el fondo negro en las páginas de registro y login */
+.login-page-regis {
+  background-color: black;
+  background-image: url('/public/images/imagen.jpg'); /* Conserva tu imagen de fondo */
+  background-size: cover;
+}
+
+/* Estilo para los bordes amarillos de los campos de entrada */
+input[type="text"], input[type="password"], select {
+  border: 2px solid yellow; /* Borde amarillo */
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+}

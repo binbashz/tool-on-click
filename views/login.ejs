@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicie Sesión</title>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body class="login-page-regis">
+    <div class="login-form">
+        <h2><a href="/" class="logo"><strong>Tool on Click</strong></a></h2>
+        <form action="/auth" method="POST">
+            <div class="top-header">
+                <h4>Hola, Nuevamente</h4>
+                <small>Estamos felices de que estes aqui</small>
+            </div>
+            <!-- Campo de Usuario con prellenado si formData está disponible -->
+            <input type="text" name="documento" id="documento" placeholder="#Documento, sin puntos ni guiones" value="<%= typeof formData !== 'undefined' ? formData.user : '' %>" required>
+            <!-- Campo de Contraseña -->
+            <input type="password" name="password" id="password" placeholder="Contraseña" required>
+            <input type="submit" class="btn-login" value="Iniciar sesión">
+        </form>
+    </div>
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <% if (typeof alert !== "undefined") { %>
+    <script>
+        Swal.fire({
+            title: '<%= alertTitle %>',
+            text: '<%= alertMessage %>',
+            icon: '<%= alertIcon %>',
+            showConfirmButton: <%= showConfirmButton %>,
+            timer: <%= timer %>
+        }).then(() => {
+            window.location.href = '/<%= ruta %>';
+        });
+    </script>
+    <% } %>
+</body>
+</html>
